@@ -1,0 +1,27 @@
+name: 🐛 Bug 反馈
+description: 生成报错、排版错位、打开文件异常
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么
+      description: 运行的命令、完整的报错输出；排版问题请附截图
+      placeholder: |
+        运行 uv run build.py 绿1 后……
+    validations:
+      required: true
+  - type: textarea
+    id: yaml
+    attributes:
+      label: poster.yaml 相关片段
+      description: 只贴出问题相关的部分即可，注意去掉手机号等个人信息
+      render: yaml
+  - type: input
+    id: env
+    attributes:
+      label: 环境
+      description: 系统 / Python 版本 / 用什么软件打开 PPTX
+      placeholder: macOS 15 · Python 3.12 · Keynote 14
+    validations:
+      required: true

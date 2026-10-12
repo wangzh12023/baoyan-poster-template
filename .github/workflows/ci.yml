@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build · ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+      - name: 生成全部 54 款
+        run: uv run build.py --no-preview -o output
+      - name: 检查输出
+        shell: bash
+        run: |
+          n=$(ls output/*.pptx | wc -l)
+          echo "生成了 $n 份 PPTX"
+          test "$n" -eq 54
+      - name: 列出配色 / 挑选配色
+        run: |
+          uv run build.py --list
+          uv run build.py 绿1 blue pink-3 --no-preview -o picked

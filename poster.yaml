@@ -1,0 +1,114 @@
+# ╭───────────────────────────────────────────────────────────────╮
+# │  海报内容配置 —— 只需要改这一个文件                               │
+# │                                                               │
+# │  改完保存，在仓库根目录运行：  uv run build.py                    │
+# │  （或 python build.py）54 款配色会全部生成到 output/              │
+# │                                                               │
+# │  小提示：时间写 18:30-19:40 也行，会自动排成 18:30 – 19:40         │
+# ╰───────────────────────────────────────────────────────────────╯
+
+# ── 标题区 ──────────────────────────────────────────────────────
+year: "2026"
+title: 保研分享会                 # 主标题，太长会自动缩小字号
+subtitle:                        # 英文副标题（最多两行，可删）；第一行会自动拉开字距、与主标题等宽
+  - GRADUATE RECOMMENDATION
+  - SHARING SESSION
+
+date: "11.07"                    # 右上角的大号日期
+weekday: Sat.                    # 日期右侧的斜体小字，可删
+time: 18:30 – 21:20
+venue: Room A-101
+
+# ── 两个场次（两栏版式），每场 1–5 位嘉宾 ─────────────────────────
+sessions:
+  - name: 第一场
+    time: 18:30 – 19:40
+    speakers:
+      - name: 林知远
+        time: 18:30 – 18:55
+        school: 星海大学                     # 院校（加粗）
+        dept: 计算机科学与技术学院            # 学院（常规字重）
+        topic: 保研全流程 & 时间线规划         # 分享主题（彩色）
+      - name: 陈思齐
+        time: 18:55 – 19:10
+        school: 云麓大学
+        dept: 人工智能研究院
+        topic: 课程学习与科研方向选择
+      - name: 苏予安
+        time: 19:10 – 19:25
+        school: 明湖大学
+        dept: 智能科学与技术学院
+        topic: 如何挑选研究方向与导师
+      - name: 顾言
+        time: 19:25 – 19:40
+        school: 示例大学
+        dept: 计算机与信息学院
+        topic: 成绩不拔尖，也能找到好去处
+    footnote:                                # 场次末尾带圆点的小字，可删
+      time: 19:40 – 20:00
+      text: 中场休息 / 交流讨论
+
+  - name: 第二场
+    time: 20:00 – 21:00
+    speakers:
+      - name: 沈清和
+        time: 20:00 – 20:15
+        school: 北辰大学
+        dept: 人工智能学院
+        topic: 本科科研经历怎么积累
+      - name: 许若溪
+        tag: 南屿大学特邀嘉宾                  # 可选：姓名右侧的彩色小标签
+        time: 20:15 – 20:30
+        school: 南屿大学
+        dept: 计算机科学与技术学院
+        topic: 从科研入门到保研申请
+      - name: 江屿白
+        time: 20:30 – 20:45
+        school: 北辰大学
+        dept: 人工智能学院
+        topic: 用好 GitHub 与个人主页
+      - name: 叶书宁
+        time: 20:45 – 21:00
+        school: 远山大学
+        dept: 数据科学研究院
+        topic: 夏令营与预推免面试复盘
+    footnote:
+      time: 21:00 – 21:20
+      text: 答疑提问 / 交流讨论
+
+# ── 底栏 ──────────────────────────────────────────────────────
+footer:
+  date: 11月7日（星期六）
+  # time: 18:30 – 21:20                    # 不写则沿用上面的 time
+  # venue: Room A-101                      # 不写则沿用上面的 venue
+  note: 分享会发起人：林知远   沈清和          # 左下角小字，可删
+
+logo:                                      # 底栏中间的主办方 logo；不需要就删掉整段
+  file: assets/logo.svg                    # 换成你的 logo（svg / png 均可，透明底最佳）
+  color: accent                            # keep 保持原色 · ink 跟随正文墨色 · accent 跟随主题色 · 或 "#9D0A12"
+  # text: [示例大学, 计算机与信息学院]         # 没有 logo 图片时，也可以只写一两行文字
+
+qr:                                        # 右下角二维码；不需要就删掉整段
+  url: https://github.com/wangzh12023/baoyan-poster-template   # 二维码内容：群链接 / 报名表链接……
+  # image: assets/qr.png                   # 只有现成二维码图片（如微信群码）时，改用这一行
+  style: dots                              # dots 圆点 · square 方块
+  title: 交流群
+  title_en: QQ GROUP
+  id_label: 群号
+  id: "123456789"
+
+# ── 进阶（一般不用改）─────────────────────────────────────────────
+# labels:                                  # 底栏三个小标签：[中文, 英文]
+#   time: [时间, TIME]
+#   venue: [地点, LOCATION]
+#   organizer: [主办, ORGANIZER]
+#
+# fonts:                                   # 换字体（默认是 macOS 自带的宋体 / 苹方 / Didot / Avenir Next）
+#   serif_black: Source Han Serif SC Heavy #   主标题、嘉宾姓名
+#   serif: Source Han Serif SC             #   场次名
+#   sans: Source Han Sans SC               #   学院、注释
+#   sans_medium: Source Han Sans SC Medium #   院校、底栏小标签
+#   sans_semibold: Source Han Sans SC Bold #   分享主题、特邀标签
+#   display: [Didot, Source Han Sans SC]   #   年份、日期、场次编号（[西文, 中文]）
+#   latin_medium: [Avenir Next Medium, Source Han Sans SC]
+#   latin_demibold: [Avenir Next Demi Bold, Source Han Sans SC]

@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.pptx binary
+*.png binary
+*.jpg binary
+*.svg text
+*.json linguist-generated
+posters/** linguist-generated

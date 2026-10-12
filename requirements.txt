@@ -1,0 +1,6 @@
+python-pptx>=1.0
+segno>=1.6
+pyyaml>=6.0
+pillow>=10.1
+lxml>=4.9
+zxing-cpp>=2.2; python_version >= "3.10"   # 可选：校验生成的二维码能扫出原链接

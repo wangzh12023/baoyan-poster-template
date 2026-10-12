@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <title>baoyan-poster-template</title>
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EFFFF9"/>
+      <stop offset="0.56" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EDFFF8"/>
+    </linearGradient>
+    <radialGradient id="blob" cx="0.3" cy="0.7" r="0.8">
+      <stop offset="0" stop-color="#41F5C7"/>
+      <stop offset="1" stop-color="#DCFFF2"/>
+    </radialGradient>
+    <clipPath id="card"><rect x="60" y="22" width="136" height="204" rx="10"/></clipPath>
+  </defs>
+  <rect x="60" y="22" width="136" height="204" rx="10" fill="url(#ground)" stroke="#16201B" stroke-opacity=".12"/>
+  <g clip-path="url(#card)">
+    <circle cx="186" cy="34" r="46" fill="url(#blob)"/>
+    <circle cx="58" cy="214" r="34" fill="#D1FFEE"/>
+  </g>
+  <rect x="76" y="44" width="46" height="13" rx="2" fill="#16201B"/>
+  <rect x="76" y="66" width="84" height="20" rx="3" fill="#16201B"/>
+  <rect x="76" y="94" width="66" height="3.5" rx="1.75" fill="#3C4741"/>
+  <g fill="#0B8A68">
+    <rect x="76" y="118" width="48" height="5" rx="2.5"/>
+    <rect x="136" y="118" width="44" height="5" rx="2.5"/>
+    <rect x="76" y="146" width="40" height="5" rx="2.5"/>
+    <rect x="136" y="146" width="40" height="5" rx="2.5"/>
+    <rect x="76" y="174" width="44" height="5" rx="2.5"/>
+    <rect x="136" y="174" width="36" height="5" rx="2.5"/>
+  </g>
+  <g fill="#7B847E">
+    <rect x="76" y="109" width="30" height="4" rx="2"/>
+    <rect x="136" y="109" width="30" height="4" rx="2"/>
+    <rect x="76" y="137" width="30" height="4" rx="2"/>
+    <rect x="136" y="137" width="30" height="4" rx="2"/>
+    <rect x="76" y="165" width="30" height="4" rx="2"/>
+    <rect x="136" y="165" width="30" height="4" rx="2"/>
+  </g>
+  <rect x="76" y="194" width="104" height="1.5" fill="#16201B"/>
+  <g>
+    <circle cx="80" cy="210" r="5" fill="#E63B25"/>
+    <circle cx="93" cy="210" r="5" fill="#F07A1E"/>
+    <circle cx="106" cy="210" r="5" fill="#E2A600"/>
+    <circle cx="119" cy="210" r="5" fill="#0B8A68"/>
+    <circle cx="132" cy="210" r="5" fill="#2E9E3A"/>
+    <circle cx="145" cy="210" r="5" fill="#0E8E9C"/>
+    <circle cx="158" cy="210" r="5" fill="#1D3FC4"/>
+    <circle cx="171" cy="210" r="5" fill="#8A4FE0"/>
+    <circle cx="184" cy="210" r="5" fill="#E0507A"/>
+  </g>
+</svg>

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💡 使用问题 / 晒海报
+    url: https://github.com/wangzh12023/baoyan-poster-template/discussions
+    about: 用法上的疑问、分享你做好的海报，欢迎到 Discussions

@@ -1,0 +1,11 @@
+name: 🎨 新配色 / 新功能
+description: 想要的配色、版式选项或使用体验改进
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: 想法
+      description: 想要什么、用在什么场景；配色建议可以附参考图或色值
+    validations:
+      required: true

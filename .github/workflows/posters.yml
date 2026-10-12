@@ -1,0 +1,29 @@
+name: Build my posters
+
+# 用模板创建自己的仓库后：改好 poster.yaml 推上来，这里会自动生成 54 款 PPTX。
+# 到 Actions → 本次运行 → Artifacts 下载 posters.zip 即可，全程不用在本地装任何东西。
+on:
+  push:
+    paths: [poster.yaml, "assets/**"]
+  workflow_dispatch:
+    inputs:
+      palettes:
+        description: 要生成的配色（空格分隔，留空 = 全部 54 款），例如：绿1 蓝 pink-3
+        required: false
+        default: ""
+
+jobs:
+  posters:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+      - name: 生成海报
+        env:
+          PALETTES: ${{ github.event.inputs.palettes }}
+        run: uv run build.py $PALETTES --no-preview -o output
+      - uses: actions/upload-artifact@v7
+        with:
+          name: posters
+          path: output/*.pptx
+          retention-days: 30
